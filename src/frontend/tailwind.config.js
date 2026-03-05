@@ -16,9 +16,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Cabinet Grotesk", "sans-serif"],
-        body: ["Sora", "sans-serif"],
-        sans: ["Sora", "sans-serif"],
+        display: ["Fraunces", "Georgia", "serif"],
+        body: ["General Sans", "system-ui", "sans-serif"],
+        sans: ["General Sans", "system-ui", "sans-serif"],
       },
       colors: {
         success: {
@@ -87,6 +87,8 @@ export default {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgba(0,0,0,0.05)",
+        card: "0 2px 12px 0 rgba(0,0,0,0.06), 0 1px 3px 0 rgba(0,0,0,0.04)",
+        "card-hover": "0 8px 24px 0 rgba(0,0,0,0.1), 0 2px 6px 0 rgba(0,0,0,0.06)",
       },
       keyframes: {
         "accordion-down": {
@@ -97,10 +99,20 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(8px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in": {
+          from: { opacity: "0", transform: "translateX(-12px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.4s ease-out",
+        "slide-in": "slide-in 0.35s ease-out",
       },
     },
   },
